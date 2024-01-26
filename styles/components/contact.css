@@ -1,0 +1,395 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.contact_content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact p {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.contact h1 {
+  position: relative;
+  font-size: var(--size-2xl);
+  color: var(--clr-light);
+}
+
+.contact h1::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3.5px;
+  background: var(--clr-rose);
+  bottom: -10px;
+  left: 10px;
+  margin-left: 20%;
+}
+
+.contact_content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-left: 0;
+  font-size: 1.3rem;
+  list-style-type: none;
+}
+
+.contact_content ul li::before {
+  content: "\2709";
+  margin-right: 0.5em;
+  color: var(--clr-rose);
+  font-size: 1.5rem;
+}
+
+.contact_content-list.phone::before {
+  content: "\1F4DE";
+  margin-right: 0.5em;
+  font-size: 1.5rem;
+}
+
+.icons {
+  width: 200px;
+  display: flex;
+  /* justify-content: space-between;*/
+  transition: all 0.06s ease-in-out;
+  margin-top: 1.5em;
+}
+
+.icons a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 0.2rem solid var(--clr-rose);
+  border-radius: 50%;
+  font-size: 17px;
+  color: var(--clr-rose);
+  z-index: 1;
+  overflow: hidden;
+  transition: 2s;
+}
+
+.icons a:hover {
+  transform: translateY(-5px);
+}
+
+/*Form*/
+#content_login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#content_login::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+#content_login .container {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: 420px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: 0.5s;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#content_login .container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-conic-gradient(
+    from var(--a),
+    #00ffff 0%,
+    #00ffff 10%,
+    transparent 10%,
+    transparent 80%,
+    #00ffff 100%
+  );
+  border-radius: 20px;
+  animation: animate 2.5s linear infinite;
+}
+
+@property --a {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes animate {
+  0% {
+    --a: 0deg;
+  }
+  100% {
+    --a: 360deg;
+  }
+}
+
+#content_login .container span {
+  position: absolute;
+  inset: 5px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+#content_login .container span::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  background: url(/images/bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+}
+
+#content_login .container span::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  background: url(/images/bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(15px);
+}
+
+form {
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  transition: 0.5s;
+}
+
+form .inputBox {
+  position: relative;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  /*padding: 20px 0px 0px;*/
+}
+
+form .inputBox input {
+  width: 100%;
+  outline: none;
+  border: 1px solid rgb(255, 255, 255, 0.25);
+  background: rgb(0, 0, 0, 0.15);
+  padding: 7px 15px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  color: #fff;
+}
+
+form .inputBox textarea {
+  width: 100%;
+  min-height: 200px;
+  outline: none;
+  border: 1px solid rgb(255, 255, 255, 0.25);
+  background: rgb(0, 0, 0, 0.15);
+  padding: 7px 15px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  color: white;
+}
+
+form .inputBox input::placeholder,
+form .inputBox textarea::placeholder {
+  color: rgb(255, 255, 255, 0.5);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+form .inputBox input[type="submit"] {
+  /*background: var(--clr-rose);*/
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+#msg {
+  color: var(--clr-rose);
+  margin-top: 10px;
+  display: block;
+}
+
+/* media query*/
+
+/*xs*/
+
+@media (min-width: 300px) {
+  .icons {
+    width: 100px;
+    display: flex;
+    transition: all 0.06s ease-in-out;
+    margin-bottom: 1.5em;
+  }
+
+  .test {
+    width: 100%;
+  }
+
+  #content_login {
+    width: 100%;
+  }
+
+  #content_login .container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    height: 420px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.5s;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  form .inputBox {
+    position: relative;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/*small*/
+@media (min-width: 640px) {
+}
+
+/*medium*/
+@media (min-width: 768px) {
+}
+
+/*large*/
+@media (min-width: 1024px) {
+  .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: initial;
+  }
+
+  .contact p {
+    line-height: 1.5;
+    font-size: var(--size-lg);
+    margin-right: 20px;
+  }
+
+  #content_login {
+    width: unset;
+  }
+
+  .test {
+    width: unset;
+  }
+
+  #content_login .container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    height: 420px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.5s;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  #content_login .container {
+  width: 600px;
+  }
+
+
+
+
+
+
+
+
+
+
+  .contact_content {
+    display: block;
+    justify-content: initial;
+    flex-direction: initial;
+    align-items: initial;
+    text-align: initial;
+  }
+
+  .contact h1 {
+    font-size: var(--size-4xl);
+  }
+
+  .contact h1::before {
+    margin-left: unset;
+  }
+
+  .contact_content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-left: 0;
+    font-size: 1.3rem;
+    list-style-type: none;
+  }
+
+  .contact_content ul li::before {
+    content: "\2709";
+    margin-right: 0.5em;
+    color: var(--clr-rose);
+    font-size: 1.9rem;
+  }
+
+  .contact_content-list.phone::before {
+    content: "\1F4DE";
+    margin-right: 0.5em;
+    font-size: 1.9rem;
+  }
+}
+
+/*xl*/
+@media (min-width: 1280px) {
+  .contact p {
+    font-size: var(--size-xl);
+}
+}
+
+/*2xl*/
+@media (min-width: 1536px) {
+}
