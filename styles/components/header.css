@@ -74,12 +74,12 @@ header nav {
 /*xs*/
 @media (min-width: 375px) {
     nav a img {
-         max-width: 80%;
+         max-width: 60%;
     }
 
     .header {
-       padding-left: 0.5rem;
-      padding-right: 0.5rem;
+       padding-left: 0.8rem;
+      padding-right: 0.9rem;
   }
   
 }
