@@ -72,8 +72,16 @@ header nav {
 /* media query*/
  
 /*xs*/
-@media (min-width: 475px) {
- 
+@media (min-width: 375px) {
+    nav a img {
+         max-width: 80%;
+    }
+
+    .header {
+       padding-left: 0.5rem;
+      padding-right: 0.5rem;
+  }
+  
 }
 
 /*small*/
