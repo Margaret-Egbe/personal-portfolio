@@ -1,3 +1,7 @@
+.featured {
+  margin-bottom: 10rem;
+}
+
 .featured h1 {
   position: relative;
   font-size: 25px;
@@ -21,7 +25,7 @@
 
 .work-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 2.3rem;
   margin-top: 50px;
 }
@@ -248,7 +252,7 @@ h4 {
 /*xl*/
 @media (min-width: 1280px) {
   .work-list {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
