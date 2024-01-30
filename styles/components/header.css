@@ -63,16 +63,17 @@ header nav {
  
     .header {
        padding-left: 0.8rem;
-       padding-right: 1.9rem;
+       padding-right: 0.8rem;
  
   }
- 
+  
+  
  }
-
+ 
 /*small*/
 @media (min-width: 640px) {
     header a img {
-        width: 80px; /* Adjust the width to your preference */
+        width: 80px;  
       }
 }
  

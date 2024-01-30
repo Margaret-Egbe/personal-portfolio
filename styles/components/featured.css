@@ -1,5 +1,5 @@
 .featured {
-  margin-bottom: 10rem;
+  margin-bottom: 7rem;
 }
 
 .featured h1 {
@@ -23,18 +23,18 @@
   border-radius: 10px;
 }
 
-.work-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-gap: 2.3rem;
-  margin-top: 50px;
-}
 
 .work {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
   display: none;
+}
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  grid-gap: 1rem; 
+  margin-top: 50px;
 }
 
 .work:hover img {
@@ -126,6 +126,7 @@ h4 {
   display: flex;
 }
 
+
 /*xs*/
 @media (min-width: 360px) {
   .layer {
@@ -140,17 +141,15 @@ h4 {
   .layer a {
     margin-top: 10px;
   }
-}
 
-/*small*/
-@media (min-width: 640px) {
+  .work {
+    margin-bottom: 1rem; 
+  }
 }
 
 /*medium*/
 @media (min-width: 768px) {
-  .work-list {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
+  
 }
 
 /*large*/
@@ -243,10 +242,12 @@ h4 {
   .featured .work:nth-child(-n + 3) {
     display: flex;
   }
-
-  .work-list {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  }
+  
+.work-list {
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+ grid-gap: 2.3rem;
+  
+}
 }
 
 /*xl*/
